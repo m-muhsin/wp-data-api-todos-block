@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/wp-data-api-todos-block",
+  "version": "0.1.0",
+  "title": "Todo List",
+  "category": "widgets",
+  "icon": "editor-ul",
+  "description": "This block is a todo list built using a custom WP Data Store.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wp-data-api-todos-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
