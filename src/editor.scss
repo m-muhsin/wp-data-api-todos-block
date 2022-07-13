@@ -5,7 +5,8 @@
  */
 
 .wp-block-create-block-wp-data-api-todos-block {
-	padding: 5px;
+	border: 1px solid gray;
+	padding: 5px 20px;
 }
 
 .todos {
@@ -17,8 +18,13 @@
 	display: flex;
 }
 
+.todo__title--done .components-checkbox-control__label {
+    text-decoration: line-through;
+}
+
 .edit-post-visual-editor .todo__remove {
-    padding-bottom: 20px;
+    padding-bottom: 22px;
+    font-size: 1.35rem;
 }
 
 .todo__form {
@@ -28,4 +34,8 @@
 	input {
 		height: 36px;
 	}
+}
+
+.todo__stats {
+	padding-left: 20px;
 }

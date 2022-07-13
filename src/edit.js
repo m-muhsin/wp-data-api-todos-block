@@ -36,10 +36,13 @@ export default function Edit() {
 
 	const [newTodo, setNewTodo] = useState('');
 
-	const todos = useSelect((select) => {
-		return select('wp-todo-list/todos').getTodos();
+	const [todos, todosLength, doneLength, pendingLength] = useSelect((select) => {
+		const todos = select('wp-todo-list/todos').getTodos();
+		const todosLength = select('wp-todo-list/todos').getTodosLength();
+		const doneLength = select('wp-todo-list/todos').getDoneTodosLength();
+		const pendingLength = select('wp-todo-list/todos').getPendingTodosLength();
+		return [todos, todosLength, doneLength, pendingLength]
 	});
-	console.log('todos',todos)
 
 	const actions = useDispatch('wp-todo-list/todos');
 
@@ -55,13 +58,13 @@ export default function Edit() {
 	}
 	return (
 		<div  {...useBlockProps()}>
-
+			<h4>Todo List</h4>
 			<ul className="todos">
 				{
 					todos.map((todo) => (
 						<li key={todo.id} className="todo">
 							<CheckboxControl
-								className="todo__title"
+								className={`todo__title${todo.completed ? ' todo__title--done' : ''}`}
 								label={todo.title}
 								checked={todo.completed}
 								onChange={() => {
@@ -82,6 +85,15 @@ export default function Edit() {
 				<TextControl value={newTodo} onChange={handleNewTodoChange} />
 				<Button type="submit" isPrimary>Add Item</Button>
 			</form>
+
+			<div>
+				<h5>Stats</h5>
+				<ul className="todo__stats">
+					<li>All: {todosLength}</li>
+					<li>Completed: {doneLength}</li>
+					<li>Pending: {pendingLength}</li>
+				</ul>
+			</div>
 		</div>
 	);
 }

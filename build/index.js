@@ -61,10 +61,13 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit() {
   const [newTodo, setNewTodo] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const todos = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
-    return select('wp-todo-list/todos').getTodos();
+  const [todos, todosLength, doneLength, pendingLength] = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
+    const todos = select('wp-todo-list/todos').getTodos();
+    const todosLength = select('wp-todo-list/todos').getTodosLength();
+    const doneLength = select('wp-todo-list/todos').getDoneTodosLength();
+    const pendingLength = select('wp-todo-list/todos').getPendingTodosLength();
+    return [todos, todosLength, doneLength, pendingLength];
   });
-  console.log('todos', todos);
   const actions = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)('wp-todo-list/todos');
 
   const handleFormSubmit = event => {
@@ -78,13 +81,13 @@ function Edit() {
     setNewTodo(value);
   };
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "Todo List"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "todos"
   }, todos.map(todo => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: todo.id,
     className: "todo"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CheckboxControl, {
-    className: "todo__title",
+    className: `todo__title${todo.completed ? ' todo__title--done' : ''}`,
     label: todo.title,
     checked: todo.completed,
     onChange: () => {
@@ -102,7 +105,9 @@ function Edit() {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
     type: "submit",
     isPrimary: true
-  }, "Add Item")));
+  }, "Add Item")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", null, "Stats"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+    className: "todo__stats"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, "All: ", todosLength), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, "Completed: ", doneLength), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, "Pending: ", pendingLength))));
 }
 
 /***/ }),
@@ -462,10 +467,22 @@ function* getTodos() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getTodos": () => (/* binding */ getTodos)
+/* harmony export */   "getDoneTodosLength": () => (/* binding */ getDoneTodosLength),
+/* harmony export */   "getPendingTodosLength": () => (/* binding */ getPendingTodosLength),
+/* harmony export */   "getTodos": () => (/* binding */ getTodos),
+/* harmony export */   "getTodosLength": () => (/* binding */ getTodosLength)
 /* harmony export */ });
 const getTodos = state => {
   return state.items;
+};
+const getTodosLength = state => {
+  return state.items.length;
+};
+const getDoneTodosLength = state => {
+  return state.items.filter(item => item.completed).length;
+};
+const getPendingTodosLength = state => {
+  return state.items.filter(item => !item.completed).length;
 };
 
 /***/ }),
