@@ -1,4 +1,4 @@
-# WP Data API Toodo List Block
+# WP Data API Todo List Block
 
 This WordPress plugin contains a todo list block that uses a custom WP Data Store.
 
