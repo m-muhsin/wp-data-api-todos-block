@@ -1,6 +1,11 @@
 import { dispatch } from '@wordpress/data';
-import { POPULATE_TODOS, DELETE_TODO, TOGGLE_TODO, ADD_TODO } from './types'
-import { deleteTodoControl, toggleTodoControl, createTodo } from './controls'
+import { POPULATE_TODOS, DELETE_TODO, TOGGLE_TODO, ADD_TODO, UPDATE_TODO } from './types'
+import {
+    deleteTodoControl,
+    toggleTodoControl,
+    createTodo,
+    updateTodoControl
+} from './controls'
 
 export function populateTodos(todos) {
     return {
@@ -20,6 +25,15 @@ export function* addTodo(title) {
         return dispatch('core/notices').createErrorNotice(
             error.message || 'Could not create todo.'
         );
+    }
+}
+
+export function* updateTodo(id, title) {
+    const updated = yield updateTodoControl(id, title);
+
+    return {
+        type: UPDATE_TODO,
+        item: updated
     }
 }
 

@@ -2,6 +2,134 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@wordpress/icons/build-module/icon/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/icon/index.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+/** @typedef {{icon: JSX.Element, size?: number} & import('@wordpress/primitives').SVGProps} IconProps */
+
+/**
+ * Return an SVG icon.
+ *
+ * @param {IconProps} props icon is the SVG component to render
+ *                          size is a number specifiying the icon size in pixels
+ *                          Other props will be passed to wrapped SVG component
+ *
+ * @return {JSX.Element}  Icon component
+ */
+
+function Icon(_ref) {
+  let {
+    icon,
+    size = 24,
+    ...props
+  } = _ref;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(icon, {
+    width: size,
+    height: size,
+    ...props
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Icon);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@wordpress/icons/build-module/library/close.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/library/close.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/primitives */ "@wordpress/primitives");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+const close = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.SVG, {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.Path, {
+  d: "M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
+}));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (close);
+//# sourceMappingURL=close.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@wordpress/icons/build-module/library/edit.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/library/edit.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _pencil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pencil */ "./node_modules/@wordpress/icons/build-module/library/pencil.js");
+/**
+ * Internal dependencies
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_pencil__WEBPACK_IMPORTED_MODULE_0__["default"]);
+//# sourceMappingURL=edit.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@wordpress/icons/build-module/library/pencil.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/library/pencil.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/primitives */ "@wordpress/primitives");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+const pencil = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.SVG, {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__.Path, {
+  d: "M20.1 5.1L16.9 2 6.2 12.7l-1.3 4.4 4.5-1.3L20.1 5.1zM4 20.8h8v-1.5H4v1.5z"
+}));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pencil);
+//# sourceMappingURL=pencil.js.map
+
+/***/ }),
+
 /***/ "./src/edit.js":
 /*!*********************!*\
   !*** ./src/edit.js ***!
@@ -22,66 +150,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
-
-
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/icon/index.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/edit.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/close.js");
+/* harmony import */ var _store_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/utils */ "./src/store/utils.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 
 
 
 
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
+
 
 function Edit() {
-  const [newTodo, setNewTodo] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  // The todo item title that's currently being added/edited.
+  const [currentTodo, setCurrentTodo] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(''); // The todo item ID that's currently being edited.
+
+  const [editing, setEditing] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(undefined); // Fetche todo items, etc. from the data store.
+
   const [todos, todosLength, doneLength, pendingLength] = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
-    const todos = select('wp-todo-list/todos').getTodos();
-    const todosLength = select('wp-todo-list/todos').getTodosLength();
-    const doneLength = select('wp-todo-list/todos').getDoneTodosLength();
-    const pendingLength = select('wp-todo-list/todos').getPendingTodosLength();
+    const store = select(_store_utils__WEBPACK_IMPORTED_MODULE_5__.STORE_NAME);
+    const todos = store.getTodos();
+    const todosLength = store.getTodosLength();
+    const doneLength = store.getDoneTodosLength();
+    const pendingLength = store.getPendingTodosLength();
     return [todos, todosLength, doneLength, pendingLength];
   });
-  const actions = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)('wp-todo-list/todos');
+  const actions = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_store_utils__WEBPACK_IMPORTED_MODULE_5__.STORE_NAME);
 
   const handleFormSubmit = event => {
     event.preventDefault();
-    console.log('handleFormSubmit');
-    actions === null || actions === void 0 ? void 0 : actions.addTodo(newTodo);
-    setNewTodo('');
+
+    if (editing) {
+      actions === null || actions === void 0 ? void 0 : actions.updateTodo(editing, currentTodo);
+      setEditing(undefined);
+    } else {
+      actions === null || actions === void 0 ? void 0 : actions.addTodo(currentTodo);
+    }
+
+    setCurrentTodo('');
   };
 
   const handleNewTodoChange = value => {
-    setNewTodo(value);
+    setCurrentTodo(value);
   };
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "Todo List"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+  const editTodo = id => {
+    setEditing(id);
+    setCurrentTodo(todos.find(todo => todo.id === id).title);
+  };
+
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Todo List', 'wp-data-api-todos-block')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "todos"
   }, todos.map(todo => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: todo.id,
@@ -95,19 +216,26 @@ function Edit() {
     }
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
     className: "todo__remove",
+    onClick: () => editTodo(todo.id)
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_icons__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_8__["default"]
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+    className: "todo__remove",
     onClick: () => actions === null || actions === void 0 ? void 0 : actions.deleteTodo(todo.id)
-  }, "\xD7")))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_icons__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
     className: "todo__form",
     onSubmit: handleFormSubmit
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
-    value: newTodo,
+    value: currentTodo,
     onChange: handleNewTodoChange
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
     type: "submit",
     isPrimary: true
-  }, "Add Item")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", null, "Stats"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+  }, editing ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Update Item', 'wp-data-api-todos-block') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add Item', 'wp-data-api-todos-block'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", null, "Stats"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "todo__stats"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, "All: ", todosLength), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, "Completed: ", doneLength), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, "Pending: ", pendingLength))));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('All', 'wp-data-api-todos-block') + ': ' + todosLength), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Completed') + ': ' + doneLength), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Pending') + ': ' + pendingLength))));
 }
 
 /***/ }),
@@ -194,7 +322,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "addTodo": () => (/* binding */ addTodo),
 /* harmony export */   "deleteTodo": () => (/* binding */ deleteTodo),
 /* harmony export */   "populateTodos": () => (/* binding */ populateTodos),
-/* harmony export */   "toggleTodo": () => (/* binding */ toggleTodo)
+/* harmony export */   "toggleTodo": () => (/* binding */ toggleTodo),
+/* harmony export */   "updateTodo": () => (/* binding */ updateTodo)
 /* harmony export */ });
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_0__);
@@ -219,6 +348,13 @@ function* addTodo(title) {
   } catch (error) {
     return (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)('core/notices').createErrorNotice(error.message || 'Could not create todo.');
   }
+}
+function* updateTodo(id, title) {
+  const updated = yield (0,_controls__WEBPACK_IMPORTED_MODULE_2__.updateTodoControl)(id, title);
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__.UPDATE_TODO,
+    item: updated
+  };
 }
 function* deleteTodo(id) {
   yield (0,_controls__WEBPACK_IMPORTED_MODULE_2__.deleteTodoControl)(id);
@@ -249,7 +385,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   "deleteTodoControl": () => (/* binding */ deleteTodoControl),
 /* harmony export */   "fetchTodos": () => (/* binding */ fetchTodos),
-/* harmony export */   "toggleTodoControl": () => (/* binding */ toggleTodoControl)
+/* harmony export */   "toggleTodoControl": () => (/* binding */ toggleTodoControl),
+/* harmony export */   "updateTodoControl": () => (/* binding */ updateTodoControl)
 /* harmony export */ });
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./src/store/types.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./src/store/utils.js");
@@ -263,6 +400,13 @@ const fetchTodos = () => {
 const createTodo = title => {
   return {
     type: _types__WEBPACK_IMPORTED_MODULE_0__.CREATE_TODO_IN_STORAGE,
+    title
+  };
+};
+const updateTodoControl = (id, title) => {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_0__.UPDATE_TODO_IN_STORAGE,
+    id,
     title
   };
 };
@@ -280,10 +424,10 @@ const toggleTodoControl = id => {
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   FETCH_TODOS() {
-    let todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)();
+    let todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME);
 
     if (!todosFromLocalStorage) {
-      (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.sampleData);
+      (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME, _utils__WEBPACK_IMPORTED_MODULE_1__.sampleData);
       todosFromLocalStorage = _utils__WEBPACK_IMPORTED_MODULE_1__.sampleData;
     }
 
@@ -291,14 +435,14 @@ const toggleTodoControl = id => {
   },
 
   DELETE_TODO_FROM_STORAGE(action) {
-    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)();
+    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME);
     const items = todosFromLocalStorage.filter(todo => todo.id !== action.id);
-    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(items);
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME, items);
     return items;
   },
 
   TOGGLE_TODO_IN_STORAGE(action) {
-    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)();
+    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME);
     const items = todosFromLocalStorage === null || todosFromLocalStorage === void 0 ? void 0 : todosFromLocalStorage.map(todo => {
       if (todo.id === action.id) {
         return { ...todo,
@@ -308,12 +452,12 @@ const toggleTodoControl = id => {
 
       return todo;
     });
-    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(items);
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME, items);
     return items;
   },
 
   CREATE_TODO_IN_STORAGE(action) {
-    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)();
+    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME);
     const highestId = todosFromLocalStorage === null || todosFromLocalStorage === void 0 ? void 0 : todosFromLocalStorage.reduce((highest, todo) => Math.max(highest, todo.id), 0);
     const newTodo = {
       title: action.title,
@@ -321,8 +465,27 @@ const toggleTodoControl = id => {
       completed: false
     };
     const items = [...todosFromLocalStorage, newTodo];
-    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(items);
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME, items);
     return newTodo;
+  },
+
+  UPDATE_TODO_IN_STORAGE(action) {
+    const todosFromLocalStorage = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.fetchTodosFromLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME);
+    let updatedTodo;
+    const updatedTodos = todosFromLocalStorage.map(todo => {
+      if (todo.id === action.id) {
+        updatedTodo = { ...todo,
+          title: action.title
+        };
+        return { ...todo,
+          title: action.title
+        };
+      }
+
+      return todo;
+    });
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.saveTodosInLocalStorage)(_utils__WEBPACK_IMPORTED_MODULE_1__.STORE_NAME, updatedTodos);
+    return updatedTodo;
   }
 
 });
@@ -421,6 +584,20 @@ const reducer = function () {
           })
         };
       }
+      ;
+
+    case _types__WEBPACK_IMPORTED_MODULE_0__.UPDATE_TODO:
+      {
+        return { ...state,
+          items: [...state.items.map(item => {
+            if (item.id === action.item.id) {
+              return action.item;
+            }
+
+            return item;
+          })]
+        };
+      }
 
     default:
       return state;
@@ -502,12 +679,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "FETCH_TODOS": () => (/* binding */ FETCH_TODOS),
 /* harmony export */   "POPULATE_TODOS": () => (/* binding */ POPULATE_TODOS),
 /* harmony export */   "TOGGLE_TODO": () => (/* binding */ TOGGLE_TODO),
-/* harmony export */   "TOGGLE_TODO_IN_STORAGE": () => (/* binding */ TOGGLE_TODO_IN_STORAGE)
+/* harmony export */   "TOGGLE_TODO_IN_STORAGE": () => (/* binding */ TOGGLE_TODO_IN_STORAGE),
+/* harmony export */   "UPDATE_TODO": () => (/* binding */ UPDATE_TODO),
+/* harmony export */   "UPDATE_TODO_IN_STORAGE": () => (/* binding */ UPDATE_TODO_IN_STORAGE)
 /* harmony export */ });
 const FETCH_TODOS = 'FETCH_TODOS';
 const POPULATE_TODOS = 'POPULATE_TODOS';
 const ADD_TODO = 'ADD_TODO';
+const UPDATE_TODO = 'UPDATE_TODO';
 const CREATE_TODO_IN_STORAGE = 'CREATE_TODO_IN_STORAGE';
+const UPDATE_TODO_IN_STORAGE = 'UPDATE_TODO_IN_STORAGE';
 const DELETE_TODO = 'DELETE_TODO';
 const DELETE_TODO_FROM_STORAGE = 'DELETE_TODO_FROM_STORAGE';
 const TOGGLE_TODO = 'TOGGLE_TODO';
@@ -529,8 +710,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "saveTodosInLocalStorage": () => (/* binding */ saveTodosInLocalStorage)
 /* harmony export */ });
 const STORE_NAME = 'wp-todo-list/todos';
-const fetchTodosFromLocalStorage = () => {
-  const todos = localStorage.getItem(STORE_NAME);
+const fetchTodosFromLocalStorage = key => {
+  const todos = localStorage.getItem(key);
 
   try {
     return JSON.parse(todos);
@@ -539,8 +720,8 @@ const fetchTodosFromLocalStorage = () => {
     return null;
   }
 };
-const saveTodosInLocalStorage = todos => {
-  localStorage.setItem(STORE_NAME, JSON.stringify(todos));
+const saveTodosInLocalStorage = (key, todos) => {
+  localStorage.setItem(key, JSON.stringify(todos));
 };
 const sampleData = [{
   userId: 1,
@@ -642,6 +823,16 @@ module.exports = window["wp"]["element"];
 /***/ ((module) => {
 
 module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "@wordpress/primitives":
+/*!************************************!*\
+  !*** external ["wp","primitives"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["primitives"];
 
 /***/ })
 

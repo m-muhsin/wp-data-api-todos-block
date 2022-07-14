@@ -1,7 +1,7 @@
 export const STORE_NAME = 'wp-todo-list/todos';
 
-export const fetchTodosFromLocalStorage = () => {
-    const todos = localStorage.getItem(STORE_NAME);
+export const fetchTodosFromLocalStorage = (key) => {
+    const todos = localStorage.getItem(key);
     try {
         return JSON.parse(todos)
     } catch (e) {
@@ -10,8 +10,8 @@ export const fetchTodosFromLocalStorage = () => {
     }
 }
 
-export const saveTodosInLocalStorage = (todos) => {
-    localStorage.setItem(STORE_NAME, JSON.stringify(todos));
+export const saveTodosInLocalStorage = (key, todos) => {
+    localStorage.setItem(key, JSON.stringify(todos));
 }
 
 export const sampleData = [

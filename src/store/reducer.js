@@ -1,4 +1,4 @@
-import { POPULATE_TODOS, DELETE_TODO, TOGGLE_TODO, ADD_TODO } from './types';
+import { POPULATE_TODOS, DELETE_TODO, TOGGLE_TODO, ADD_TODO, UPDATE_TODO } from './types';
 
 const DEFAULT_STATE = {
 	items: [],
@@ -31,6 +31,20 @@ const reducer = (state = DEFAULT_STATE, action) => {
                     }
                     return item;
                 })
+            }
+        };
+
+        case UPDATE_TODO: {
+            return {
+                ...state,
+                items: [
+                    ...state.items.map(item => {
+                        if (item.id === action.item.id) {
+                            return action.item;
+                        }
+                        return item;
+                    })
+                ]
             }
         }
 

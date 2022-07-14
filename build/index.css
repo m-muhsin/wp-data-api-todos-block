@@ -25,8 +25,11 @@
 }
 
 .edit-post-visual-editor .todo__remove {
-  padding-bottom: 22px;
-  font-size: 1.35rem;
+  padding: 6px 6px 22px;
+}
+
+form.todo__form .components-base-control {
+  flex: 1;
 }
 
 .todo__form {
