@@ -6,11 +6,12 @@ import {
     UPDATE_TODO_IN_STORAGE,
 } from './types';
 import {
-    sampleData,
     saveTodosInLocalStorage,
     fetchTodosFromLocalStorage,
-    STORE_NAME
 } from './utils';
+import { sampleData } from './constants';
+
+import { STORE_KEY } from './constants';
 
 export const fetchTodos = () => {
     return {
@@ -49,32 +50,32 @@ export const toggleTodoControl = (id) => {
 
 export default {
     FETCH_TODOS() {
-        let todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_NAME);
+        let todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_KEY);
         if (!todosFromLocalStorage) {
-            saveTodosInLocalStorage(STORE_NAME, sampleData);
+            saveTodosInLocalStorage(STORE_KEY, sampleData);
             todosFromLocalStorage = sampleData;
         }
         return todosFromLocalStorage;
     },
     DELETE_TODO_FROM_STORAGE(action) {
-        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_NAME);
+        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_KEY);
         const items = todosFromLocalStorage.filter(todo => todo.id !== action.id);
-        saveTodosInLocalStorage(STORE_NAME, items);
+        saveTodosInLocalStorage(STORE_KEY, items);
         return items;
     },
     TOGGLE_TODO_IN_STORAGE(action) {
-        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_NAME);
+        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_KEY);
         const items = todosFromLocalStorage?.map(todo => {
             if (todo.id === action.id) {
                 return { ...todo, completed: !todo.completed };
             }
             return todo;
         });
-        saveTodosInLocalStorage(STORE_NAME, items);
+        saveTodosInLocalStorage(STORE_KEY, items);
         return items;
     },
     CREATE_TODO_IN_STORAGE(action) {
-        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_NAME);
+        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_KEY);
         const highestId = todosFromLocalStorage?.reduce((highest, todo) => Math.max(highest, todo.id), 0);
         const newTodo = {
             title: action.title,
@@ -82,11 +83,11 @@ export default {
             completed: false
         }
         const items = [...todosFromLocalStorage, newTodo];
-        saveTodosInLocalStorage(STORE_NAME, items);
+        saveTodosInLocalStorage(STORE_KEY, items);
         return newTodo;
     },
     UPDATE_TODO_IN_STORAGE(action) {
-        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_NAME);
+        const todosFromLocalStorage = fetchTodosFromLocalStorage(STORE_KEY);
         let updatedTodo;
         const updatedTodos = todosFromLocalStorage.map(todo => {
             if (todo.id === action.id) {
@@ -95,7 +96,7 @@ export default {
             }
             return todo;
         });
-        saveTodosInLocalStorage(STORE_NAME, updatedTodos);
+        saveTodosInLocalStorage(STORE_KEY, updatedTodos);
         return updatedTodo;
     },
 };

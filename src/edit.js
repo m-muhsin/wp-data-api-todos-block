@@ -5,7 +5,7 @@ import { useSelect, useDispatch } from '@wordpress/data';
 import { Button, CheckboxControl, TextControl } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { Icon, edit, close } from '@wordpress/icons'
-import { STORE_NAME } from './store/utils';
+import { STORE_KEY } from './store/constants';
 
 import './editor.scss';
 
@@ -19,7 +19,7 @@ export default function Edit() {
 
 	// Fetche todo items, etc. from the data store.
 	const [todos, todosLength, doneLength, pendingLength] = useSelect((select) => {
-		const store = select(STORE_NAME);
+		const store = select(STORE_KEY);
 		const todos = store.getTodos();
 		const todosLength = store.getTodosLength();
 		const doneLength = store.getDoneTodosLength();
@@ -27,7 +27,7 @@ export default function Edit() {
 		return [todos, todosLength, doneLength, pendingLength]
 	});
 
-	const actions = useDispatch(STORE_NAME);
+	const actions = useDispatch(STORE_KEY);
 
 	const handleFormSubmit = (event) => {
 		event.preventDefault();

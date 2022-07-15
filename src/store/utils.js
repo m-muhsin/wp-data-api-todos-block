@@ -1,5 +1,3 @@
-export const STORE_NAME = 'wp-todo-list/todos';
-
 export const fetchTodosFromLocalStorage = (key) => {
     const todos = localStorage.getItem(key);
     try {
@@ -13,9 +11,3 @@ export const fetchTodosFromLocalStorage = (key) => {
 export const saveTodosInLocalStorage = (key, todos) => {
     localStorage.setItem(key, JSON.stringify(todos));
 }
-
-export const sampleData = [
-    { userId: 1, id: 1, title: 'Buy Milk', completed: false },
-    { userId: 1, id: 2, title: 'Gardening', completed: false },
-    { userId: 1, id: 3, title: 'Complete Project Nova', completed: false },
-];

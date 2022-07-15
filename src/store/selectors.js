@@ -1,4 +1,4 @@
-export const getTodos = (state) => {
+export const getTodos = (state, param) => {
     return state.items;
 }
 
