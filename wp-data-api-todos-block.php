@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       WP Data API Todos Block
- * Description:       Example block written with ESNext standard and JSX support – build step required.
+ * Description:       This block is a todo list built using a custom WP Data Store.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Muhammad Muhsin
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wp-data-api-todos-block

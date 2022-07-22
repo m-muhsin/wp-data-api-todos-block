@@ -16,6 +16,8 @@ import './style.scss';
 
 import './store/index';
 
+import metadata from './block.json';
+
 /**
  * Internal dependencies
  */
@@ -27,7 +29,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType( 'create-block/wp-data-api-todos-block', {
+registerBlockType( metadata.name, {
 	/**
 	 * @see ./edit.js
 	 */
